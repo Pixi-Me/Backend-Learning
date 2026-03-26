@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +9,41 @@
 
 
 </head>
-<body class="bg-zinc-900 w-full h-full text-white flex flex-col">
-    <form action="/create" method="post"
-    class="p-10 flex flex-col gap-5 w-full h-1/3">
-        <input
-        type="text" 
-        placeholder="Enter your title"
-        name="title"
-        class="p-3 border outline-none rounded-md bg-zinc-800 w-full">
-        <input
-        type="text" 
-        placeholder="Enter your title"
-        name="details"
-        class="p-3 border outline-none rounded-md bg-zinc-800 w-full">
-        <button 
-        type="submit"
-        class="bg-red-500 w-1/2 h-10 rounded-2xl ml-[25%] font-bold">Create task</button>
+
+<body class="bg-zinc-900 w-full h-screen text-white flex flex-col p-10 user-select-none">
+    <form action="/submit" method="post" class=" flex flex-col gap-5 w-full h-1/3">
+        <input type="text" placeholder="Enter your title" name="title"
+            class="p-3 border outline-none rounded-md bg-zinc-800 w-full">
+        <input type="text" placeholder="Enter your title" name="details"
+            class="p-3 border outline-none rounded-md bg-zinc-800 w-full">
+        <button type="submit" class="bg-red-500 w-1/2 h-10 rounded-2xl ml-[25%] font-bold">Create task</button>
     </form>
-    <div 
-    class="w-full h-2/3 border ">
-hello
+    <div class="w-full flex flex-wrap gap-4 ">
+
+        <% tasks.forEach(task=> { %>
+            <div
+                class="min-w-50 transition-all duration-200 ease-in-out hover:shadow-[0px_0px_5px_white] h-25 border border-white/50 rounded-md bg-zinc-700 p-4">
+                <div class="text-xl underline decoration-white/50 font-bold">
+                    Task goes ehree
+                </div>
+                <a href=""
+                    class="text-zinc-400 hover:text-blue-500 text-sm inline-block mt-2 transition-all duration-200 ease-in">
+                    Read more...
+                </a>
+            </div>
+            <% }) %>
+            <% if(tasks.length == 0){%>
+                <div
+                class="text-xl text-zinc-400">
+                    No tasks added yet.
+                </div>
+            <% } %>
+
+
+
     </div>
+
+
 </body>
+
 </html>
