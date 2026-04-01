@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/output.css">
+    <script src="https://kit.fontawesome.com/6332f68412.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="h-screen w-screen bg-zinc-800 p-10">
+    <div class="fixed top-2 rounded left-[10%] p-5 text-blue-400 w-[80%] h-10 border flex items-center justify-between">
+        <a href="/">Back</a>
+        <a href="/clear">Delete all</a>
+    </div>
+    <div class="cards flex flex-wrap gap-5 p-5">
+        <% data.forEach(e=> { %>
+            
+            <div class="relative card h-72 w-40 border rounded-b-xl rounded-t-4xl">
+                <a href="/delOne/<%= e._id %>" class="text-red-500 absolute top-2  right-2 text-xl hover:cusror-pointer">X</a>
+                <a href="/edit/<%= e._id  %>" class="absolute top-2  left-2">Edit</a>
+                <div class="h-[80%] w-full rounded-4xl overflow-hidden">
+                    <img class="w-full h-full object-cover"
+                        src=<%= e.img  %>>
+                        
+                </div>
+                <div class="text-[18px] p-1 pb-0 text-zinc-50">
+                    <%= e.name %>
+                </div>
+                <div class="text-sm pl-1 text-zinc-300/70">
+                    <%= e.domain %>
+                </div>
+            </div>
+
+            <% }); %>
+
+
+
+    </div>
+</body>
+
+</html>

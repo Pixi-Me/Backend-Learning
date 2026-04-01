@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/output.css">
+</head>
+<body class="bg-zinc-800 h-screen w-screen box-border p-10  text-white">
+    <div class="fixed top-2 rounded left-[10%] p-5 text-blue-400 w-[80%] h-10 border flex items-center justify-between">
+        <a href="/read">Data</a>
+    </div>
+    <form action="/create" method="post" class="flex gap-3 pt-5">
+        <input type="text" placeholder="Name" class="border p-2 border-white/30 rounded-md bg-zinc-700" name="name" id="">
+        <input type="text" placeholder="Domain" class="border p-2 border-white/30 rounded-md bg-zinc-700" name="domain" id="">
+        <input type="text" placeholder="img url" class="border p-2 border-white/30 rounded-md bg-zinc-700" name="img" id="">
+        <button class="bg-white/50 p-2 w-30 rounded-2xl" type="submit">Submit</button>
+    </form>
+</body>
+</html>
