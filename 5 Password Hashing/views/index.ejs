@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body class="h-screen w-screen bg-zinc-800 flex justify-center items-center">
+    <form class="border p-5 py-10 gap-4 flex flex-col h-80 w-80 rounded-2xl text-white" 
+    action="/signIn"
+    method="post">
+        <h1 class="self-center ">Login/SignUp</h1>
+        <input class="p-3 border border-white/30 rounded-2xl w-full" type="text" name="email" placeholder="Email" id="">
+        <input class="p-3 border border-white/30 rounded-2xl w-full" placeholder="Password" type="password" name="password">
+        <button
+        class="p-3 border border-white/30 rounded-2xl w-full"
+        type="submit">Submit</button>
+    </form>
+
+</body>
+</html>
